@@ -6,4 +6,6 @@ Para facilitar a vida de quem é entusiasmado por dados, o script python deste p
 
 A estrutura dos diretórios foi baseada em um proposta interna da organização na qual trabalho e teve a contribuição de Fernando Sola.
 
-Basta rodar o script no terminal que as pastas e o ambiente virtual será criado (opcional)
+Basta rodar o script no terminal que as pastas e o ambiente virtual será criado (opcional).
+
+Foi testado nos sistemas operacionais Windows e Linux.
