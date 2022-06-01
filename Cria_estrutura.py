@@ -79,7 +79,7 @@ while True:
             print(f'Instalando {pacote}')
             os.system(f'pip install {pacote}')
         print('Pacotes instados')
-
+        
         break
 
     elif (pergunta == 'N') or (pergunta == 'n'):
@@ -109,7 +109,19 @@ if (pergunta == 'S') or (pergunta == 's'):
     print(f'Ambiente virtual {venv} criado')
     print('Pacotes instalados:')
     for pacote in pacotes_lista:
-        print(f'- {pacote}')
+        print(f'- {pacote}')       
+    
+    #Ativa o ambiente virtual de acordo com o sistema operacional
+    print('\nPara ativar o ambiente virtual no seu sistema operacional,\nvá para a pasta do projeto e utilize o comando abaixo:')
+    #Windows
+    if sys.platform.startswith('win32'):        
+        print(f'{venv}\Scripts\Activate')
+    #Linux ou MacOS
+    elif sys.platform.startswith('linux') or sys.platform.startswith('darwin'):
+        print(f'{venv}/bin/activate')
+    else: 
+        print('Ainda não temos suporte para o seu sistema operacional.')  
+        
 else:
     print('- Não foi criado um ambiente virtual. Se desejar criar, siga as instruções deste site: ')
     print('https://www.treinaweb.com.br/blog/criando-ambientes-virtuais-para-projetos-python-com-o-virtualenv\n')
